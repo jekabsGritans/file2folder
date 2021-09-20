@@ -8,7 +8,7 @@ def main():
 			os.chdir(dir)
 			ffs = os.listdir()
 			for ff in ffs:
-				if os.path.isfile(ff):
+				if os.path.isfile(ff)&(ff[0]!="."):
 					folder = Path(ff).stem
 					os.mkdir(folder)
 					os.replace(ff, folder+"/"+ff)
